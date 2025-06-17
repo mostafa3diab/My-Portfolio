@@ -78,6 +78,7 @@
 .cssbuttons-io-button {
   display: flex;
   width: fit-content;
+  min-width: fit-content;
   align-items: center;
   font-family: inherit;
   cursor: pointer;
@@ -153,56 +154,75 @@ header .change {
 }
 
 #About .image {
-  border: 10px solid rgb(85, 85, 85);
-  width: 360px;
-  height: 360px;
+  border: 8px solid rgb(85, 85, 85);
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
   position: relative;
+  margin-bottom: 100px;
 }
 
 #About .image img {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 20px;
+  left: 20px;
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+  border-radius: inherit;
 }
 
 .porfile-overly {
-  background: rgba(0, 0, 0, 0.57) none repeat scroll 0 0;
+  background: rgba(0, 0, 0, 0.57);
   position: absolute;
-  left: 15px;
-  top: 15px;
-  width: 360px;
-  height: 360px;
+  top: 20px;
+  left: 20px;
+  width: 110%;
+  height: 110%;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.5s ease 0s;
+  transition: all 0.5s ease;
+  border-radius: inherit;
 }
 
 .image:hover .porfile-overly {
-  border-radius: 5px;
-  height: 360px;
   opacity: 1;
   visibility: visible;
 }
 
 .social-icon {
-  left: 50%;
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 .social-icon li {
   display: inline-block;
+  margin: 0 5px;
 }
+
 .social-icon li a {
-  display: block;
   font-size: 20px;
-  height: 20px;
-  width: 32px;
   color: #fff;
+  transition: color 0.3s;
 }
+
 .social-icon li a:hover {
   color: #ff305b;
+}
+
+@media (max-width: 768px) {
+  #About .col-6 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  #About .text-start {
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
 
 #About h4 {
