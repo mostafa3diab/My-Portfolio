@@ -1,0 +1,348 @@
+.navbar {
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.01);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Default text: white */
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+/* On scroll: solid background + black text */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+  color: black !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  position: relative;
+  transition: color 0.3s;
+}
+
+/* Hover underline for normal nav links */
+.navbar-light .navbar-nav .nav-link:not(.no-underline)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-light .navbar-nav .nav-link:not(.no-underline):hover::after {
+  width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #e73342;
+}
+
+/* Button-style nav item */
+.navbar-light .navbar-nav .nav-item.button-link {
+  background-color: #dc3545;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+.navbar-light .navbar-nav .nav-item.button-link .nav-link {
+  color: white;
+  padding: 8px 16px;
+}
+
+.navbar-light .navbar-nav .nav-item.button-link:hover {
+  background-color: #c82333;
+}
+
+.navbar-light .navbar-brand {
+  color: white;
+}
+
+.navbar-light .navbar-brand:hover {
+  color: #f8d7da;
+}
+
+/* From Uiverse.io by adamgiebl */
+.cssbuttons-io-button {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.5em 0.8em 1.2em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(
+    0deg,
+    rgba(77, 54, 208, 1) 0%,
+    rgba(132, 116, 254, 1) 100%
+  );
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #4d36d0be;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+}
+
+.cssbuttons-io-button svg {
+  margin-right: 8px;
+}
+
+.cssbuttons-io-button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #4d36d0be;
+}
+
+.cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
+}
+
+#Hero {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7),
+      rgba(19, 19, 19, 0.7) 75%,
+      rgba(33, 33, 33, 0.7)
+    ),
+    url(images/tree.jpg);
+  background-attachment: fixed;
+  height: 100vh;
+  background-position: 50%;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.navbar a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.navbar a:hover .download {
+  color: #dfdfdf;
+}
+
+header .change {
+  display: inline-block;
+  font-size: 30px;
+  width: 380px;
+  border-right: 2px solid #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: control-width 3s 0.5s backwards infinite;
+}
+
+@keyframes control-width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 380px;
+  }
+}
+
+#About .image {
+  border: 10px solid rgb(85, 85, 85);
+  width: 360px;
+  height: 360px;
+  position: relative;
+}
+
+#About .image img {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.porfile-overly {
+  background: rgba(0, 0, 0, 0.57) none repeat scroll 0 0;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 360px;
+  height: 360px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.image:hover .porfile-overly {
+  border-radius: 5px;
+  height: 360px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.social-icon {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.social-icon li {
+  display: inline-block;
+}
+.social-icon li a {
+  display: block;
+  font-size: 20px;
+  height: 20px;
+  width: 32px;
+  color: #fff;
+}
+.social-icon li a:hover {
+  color: #ff305b;
+}
+
+#About h4 {
+  position: relative;
+}
+
+#About h4::before {
+  content: "";
+  background-color: #dc3545;
+  height: 100%;
+  width: 5px;
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+}
+
+#About hr {
+  border-style: dashed;
+}
+
+.line {
+  background-color: #dc3545;
+  width: 200px;
+  height: 1px;
+  margin: auto;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.line::before {
+  content: "";
+  background-color: #dc3545;
+  width: 100px;
+  height: 1px;
+  margin: auto;
+  position: absolute;
+  bottom: 5px;
+  left: 50px;
+}
+.line::after {
+  content: "";
+  background-color: #dc3545;
+  width: 100px;
+  height: 1px;
+  margin: auto;
+  position: absolute;
+  top: 5px;
+  left: 50px;
+}
+
+.contact-form {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 30px;
+}
+
+.form-control:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(255, 65, 108, 0.25);
+}
+
+.btn-send {
+  background-color: #e73342;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+}
+
+.btn-send:hover {
+  background-color: #dc3545;
+}
+
+button {
+  background-color: #dc3545;
+  border: 1px solid #dc3545;
+  padding: 5px;
+  position: relative;
+  width: 6.2em;
+  height: 2.2em;
+  transition: 0.5s;
+  font-size: 17px;
+  border-radius: 0.4em;
+}
+
+button p {
+  position: absolute;
+  top: 0.3em;
+  left: 1.15em;
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+  color: #fff;
+}
+
+button svg {
+  position: absolute;
+  top: 0.45em;
+  right: 0.5em;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: 0.5s;
+  height: 1em;
+  fill: #fff;
+}
+
+button:hover p {
+  left: 0.5em;
+  color: #fff;
+}
+
+button:hover svg {
+  opacity: 1;
+}
+
+button:hover {
+  background-color: #dc3545;
+}
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer .social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer .social-icons a:hover {
+  color: #ff416c;
+  transform: scale(1.2);
+}
+
+.footer .copyright {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ccc;
+}
